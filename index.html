@@ -89,7 +89,7 @@
             </div>
             <div class="product-info">
                 <h2>Awesome Product</h2>
-                <p>This is an awesome product that you absolutely need in your life. It's high-quality, durable, and stylish. Perfect for any occasion and guaranteed to make a difference!</p>
+                <p>This is an awesome product that you absolutely need in your life. It's high-quality, durable, and stylish. Perfect for any occasion!</p>
                 <button class="buy-btn" id="checkout-button">Buy Now</button>
             </div>
         </div>
@@ -100,10 +100,10 @@
 
     <script>
         // Your Stripe publishable key
-        const stripe = Stripe('pk_test_4TbuO6nYtD7yexbW8shb4UyC'); // Replace with your Stripe Publishable Key
+        const stripe = Stripe('pk_test_4TbuO6nYtD7yexbW8shb4UyC'); // Replace with your actual Stripe publishable key
 
         document.getElementById('checkout-button').addEventListener('click', function () {
-            fetch('/create-checkout-session', {
+            fetch('/api/create-checkout-session', {
                 method: 'POST',
             })
             .then(function (response) {
