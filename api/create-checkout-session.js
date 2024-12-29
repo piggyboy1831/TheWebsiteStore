@@ -7,18 +7,19 @@ module.exports = async (req, res) => {
     try {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
-        line_items: [
-          {
-            price_data: {
-              currency: 'usd',
-              product_data: {
-                name: 'Awesome Product',
-              },
-              unit_amount: 5000,  // Price in cents (e.g., $50.00)
-            },
-            quantity: 1,
-          },
-        ],
+      line_items: [
+  {
+    price_data: {
+      currency: 'usd',
+      product_data: {
+        name: 'Awesome Product',
+      },
+      unit_amount: 10000,  // Price in cents ($100.00)
+    },
+    quantity: 1,
+  },
+],
+
         mode: 'payment',
         success_url: `${req.headers.origin}/success.html`,
         cancel_url: `${req.headers.origin}/cancel.html`,
