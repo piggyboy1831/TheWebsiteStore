@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
             price_data: {
               currency: 'usd',
               product_data: {
-                name: 'Awesome Product',
+                name: 'One website',
               },
               unit_amount: 10000, // $100.00 (in cents)
             },
