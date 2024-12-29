@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
                             product_data: {
                                 name: 'Awesome Product',
                             },
-                            unit_amount: 10000, // $100
+                            unit_amount: 10000, // $100.00 (in cents)
                         },
                         quantity: 1,
                     },
@@ -24,6 +24,7 @@ module.exports = async (req, res) => {
 
             res.status(200).json({ id: session.id });
         } catch (err) {
+            console.error('Error creating checkout session:', err);
             res.status(500).json({ error: err.message });
         }
     } else {
