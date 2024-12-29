@@ -1,0 +1,16 @@
+{
+  "name": "stripe-shop",
+  "version": "1.0.0",
+  "description": "A simple Stripe integration for a store",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "stripe": "^11.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "16.x"
+  }
+}
